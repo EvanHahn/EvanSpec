@@ -10,35 +10,29 @@
 	EvanSpec is freely licensed for any use, subject to no conditions.	*/
 
 #include <iostream>
+#include <string>
 
-// Expect equality
+// Expect equality, no message
 template <typename A, typename B>
 bool EXPECT_EQUALITY(A a, B b) {
 	if (a == b) {
+		std::cout << "Success: " << a << " equals " << b << "." << std::endl;
 		return true;
 	} else {
-		std::cout << "Failure: expected " << a << " to equal " << b << "." << std::endl;
+		std::cout << "** FAILURE: expected " << a << " to equal " << b << ". **" << std::endl;
 		return false;
 	}
 }
 
-// Expect true
-template <typename T>
-bool EXPECT_TRUE(T a) {
-	if (a) {
+// Expect equality, with message
+template <typename A, typename B>
+bool EXPECT_EQUALITY(A a, B b, std::string message) {
+	if (a == b) {
+		std::cout << "Success: expected " << message << ". " << a << " equals " << b << "." << std::endl;
 		return true;
 	} else {
-		std::cout << "Failure: expected " << a << " to be true." << std::endl;
-	}
-}
-
-// Expect false
-template <typename T>
-bool EXPECT_FALSE(T a) {
-	if (!a) {
-		return true;
-	} else {
-		std::cout << "Failure: expected " << a << " to be false." << std::endl;
+		std::cout << "** FAILURE: expected " << message << ". Expected " << a << " to equal " << b << ". **" << std::endl;
+		return false;
 	}
 }
 
