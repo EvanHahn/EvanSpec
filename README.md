@@ -11,4 +11,4 @@ The goals for EvanSpec were as follows:
 * One simple function that does testing.
 * Really easy to learn, really easy to see output.
 
-License information is in `LICENSE.txt`.
+EvanSpec is freely licensed for any use, subject to no conditions.

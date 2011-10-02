@@ -1,10 +1,20 @@
+/*	EvanSpec
+	by Evan Hahn (evanhahn.com)
+
+	EvanSpec aims to be a really simple unit testing framework for C++. It is
+	missing a number of features, but it was written to test my programming
+	projects at the University of Michigan.
+	
+	Enjoy!
+
+	EvanSpec is freely licensed for any use, subject to no conditions.	*/
+
 #include <iostream>
-#include <typeinfo>
 
 // Expect equality
 template <typename A, typename B>
 bool EXPECT_EQUALITY(A a, B b) {
-	if ((typeid(a) == typeid(b)) && (a == b)) {
+	if (a == b) {
 		return true;
 	} else {
 		std::cout << "Failure: expected " << a << " to equal " << b << "." << std::endl;
