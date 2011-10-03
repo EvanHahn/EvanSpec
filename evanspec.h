@@ -12,11 +12,16 @@
 #include <iostream>
 #include <string>
 
+// Config variables
+bool PRINT_SUCCESS = true;
+
 // Expect equality, no message
 template <typename A, typename B>
 bool EXPECT_EQUALITY(A a, B b) {
 	if (a == b) {
-		std::cout << "Success: " << a << " equals " << b << "." << std::endl;
+		if (PRINT_SUCCESS) {
+			std::cout << "Success: " << a << " equals " << b << "." << std::endl;
+		}
 		return true;
 	} else {
 		std::cout << "** FAILURE: expected " << a << " to equal " << b << ". **" << std::endl;
@@ -28,7 +33,9 @@ bool EXPECT_EQUALITY(A a, B b) {
 template <typename A, typename B>
 bool EXPECT_EQUALITY(A a, B b, std::string message) {
 	if (a == b) {
-		std::cout << "Success: expected " << message << ". " << a << " equals " << b << "." << std::endl;
+		if (PRINT_SUCCESS) {
+			std::cout << "Success: expected " << message << ". " << a << " equals " << b << "." << std::endl;
+		}
 		return true;
 	} else {
 		std::cout << "** FAILURE: expected " << message << ". Expected " << a << " to equal " << b << ". **" << std::endl;
