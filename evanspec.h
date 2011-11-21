@@ -51,3 +51,4 @@ bool EXPECT_EQUALITY(A a, B b, std::string message) {
 		return false;
 	}
 }
+
