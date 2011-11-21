@@ -12,9 +12,6 @@
 #include <iostream>
 #include <string>
 
-#include <iostream>
-#include <string>
-
 // Config variables
 bool PRINT_SUCCESS = true;
 bool BASH_COLORS = true;
