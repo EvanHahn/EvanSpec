@@ -32,17 +32,29 @@
 
 	For more information, please refer to <http://unlicense.org/>	*/
 
-// Includes
+
+/**
+ * Includes
+ */
+
 #include <iostream>
 #include <string>
 
-// Config variables
+/**
+ * Configration variables
+ */
+
 bool PRINT_SUCCESS = true;
 bool BASH_COLORS = true;
 
-// Expect equality, no message
+/**
+ * Expect equality, no message
+ */
+
 template <typename A, typename B>
 bool EXPECT_EQUALITY(A a, B b) {
+
+	// The same
 	if (a == b) {
 		if (PRINT_SUCCESS) {
 			if (BASH_COLORS) std::cout << "\e[0;32m";
@@ -50,17 +62,26 @@ bool EXPECT_EQUALITY(A a, B b) {
 			if (BASH_COLORS) std::cout << "\e[m";
 		}
 		return true;
-	} else {
+	}
+
+	// Different
+	else {
 		if (BASH_COLORS) std::cout << "\e[0;31m";
 		std::cout << "** FAILURE: expected " << a << " to equal " << b << ". **" << std::endl;
 		if (BASH_COLORS) std::cout << "\e[m";
 		return false;
 	}
+
 }
 
-// Expect equality, with message
+/**
+ * Expect equality, WITH a message
+ */
+
 template <typename A, typename B>
 bool EXPECT_EQUALITY(A a, B b, std::string message) {
+
+	// The same
 	if (a == b) {
 		if (PRINT_SUCCESS) {
 			if (BASH_COLORS) std::cout << "\e[0;32m";
@@ -68,11 +89,14 @@ bool EXPECT_EQUALITY(A a, B b, std::string message) {
 			if (BASH_COLORS) std::cout << "\e[m";
 		}
 		return true;
-	} else {
+	}
+
+	// Different
+	else {
 		if (BASH_COLORS) std::cout << "\e[0;31m";
 		std::cout << "** FAILURE: expected " << message << ". Expected " << a << " to equal " << b << ". **" << std::endl;
 		if (BASH_COLORS) std::cout << "\e[m";
 		return false;
 	}
-}
 
+}
