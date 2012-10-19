@@ -10,4 +10,3 @@ The goals for EvanSpec were as follows:
 * One `#include` at the top, all the tests go into the `main()`. All the tests go in one CPP file.
 * One simple function that does testing.
 * Really easy to learn, really easy to see output.
-
