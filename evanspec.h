@@ -11,21 +11,21 @@
  * License information is at the bottom of the file.
  */
 
-/**
+/*
  * Includes
  */
 
 #include <iostream>
 #include <string>
 
-/**
+/*
  * Configration variables
  */
 
 bool PRINT_SUCCESS = true;
 bool BASH_COLORS = true;
 
-/**
+/*
  * Expect equality, no message
  */
 
@@ -52,8 +52,8 @@ bool EXPECT_EQUALITY(A a, B b) {
 
 }
 
-/**
- * Expect equality, WITH a message
+/*
+ * Expect equality with message
  */
 
 template <typename A, typename B>
