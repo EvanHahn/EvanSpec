@@ -25,6 +25,33 @@ bool PRINT_SUCCESS = true;
 bool BASH_COLORS = true;
 
 /*
+ * Expect true
+ */
+
+bool eassert(bool b) {
+
+	// Good
+	if (b) {
+		if (PRINT_SUCCESS) {
+			if (BASH_COLORS) std::cout << "\e[0;32m";
+			std::cout << "Success: true." << std::endl;
+			if (BASH_COLORS) std::cout << "\e[m";
+		}
+	}
+
+	// Bad
+	else {
+		if (BASH_COLORS) std::cout << "\e[0;31m";
+		std::cout << "** FAILURE: false. **" << std::endl;
+		if (BASH_COLORS) std::cout << "\e[m";
+	}
+
+	// Done!
+	return b;
+
+}
+
+/*
  * Expect equality, no message
  */
 
