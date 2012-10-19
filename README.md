@@ -1,7 +1,7 @@
 EvanSpec: simple unit tests for C++
 ===================================
 
-EvanSpec aims to be a really simple unit testing framework for C++.
+EvanSpec aims to be a really simple unit testing framework for C++. It has one function, called `eassert`.
 
 The goals for EvanSpec were as follows:
 
