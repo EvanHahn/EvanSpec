@@ -11,10 +11,6 @@
  * License information is at the bottom of the file.
  */
 
-/*
- * Includes
- */
-
 #include <iostream>
 #include <string>
 
