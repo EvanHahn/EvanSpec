@@ -29,7 +29,7 @@ bool BASH_COLORS = true;
  */
 
 template <typename A, typename B>
-bool EXPECT_EQUALITY(A a, B b) {
+bool eassert(A a, B b) {
 
 	// The same
 	if (a == b) {
@@ -56,7 +56,7 @@ bool EXPECT_EQUALITY(A a, B b) {
  */
 
 template <typename A, typename B>
-bool EXPECT_EQUALITY(A a, B b, std::string message) {
+bool eassert(A a, B b, std::string message) {
 
 	// The same
 	if (a == b) {
