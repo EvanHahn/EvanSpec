@@ -11,6 +11,9 @@
  * License information is at the bottom of the file.
  */
 
+#ifndef EvanSpec
+#define EvanSpec
+
 #include <iostream>
 #include <string>
 
@@ -103,3 +106,5 @@ OTHER DEALINGS IN THE SOFTWARE.
 For more information, please refer to <http://unlicense.org/>
 
 */
+
+#endif
